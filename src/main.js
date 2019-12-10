@@ -6,4 +6,10 @@ import DefaultLayout from '~/layouts/Default.vue'
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'description',
+    content: 'Noemi Mate | Digital Marketing & SEO Consultant from Budapest, Hungary'
+  })
 }
