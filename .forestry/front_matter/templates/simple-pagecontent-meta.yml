@@ -8,5 +8,11 @@ fields:
 - type: datetime
   name: date
   label: date
+- name: slug
+  type: text
+  config:
+    required: false
+  label: slug
+  description: The expression that references this page in the URL
 pages:
 - src/content/pages/testpage-created-in-forestry.md
