@@ -20,6 +20,7 @@ module.exports = function (api) {
         edges {
           node {
             id
+            slug
           }
         }
       }
@@ -27,7 +28,7 @@ module.exports = function (api) {
 
     data.allCustomPage.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.id}`,
+        path: `/${node.slug}`,
         component: './src/templates/CustomPage.vue',
         context: {
           id: node.id
