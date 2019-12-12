@@ -14,7 +14,7 @@ module.exports = function (api) {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
       }
     ) */
-  /* api.createPages(async ({ graphql, createPage }) => {
+  api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
       allCustomPage {
         edges {
@@ -24,15 +24,16 @@ module.exports = function (api) {
         }
       }
     }`)
+
+    data.allCustomPage.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.id}`,
+        component: './src/templates/CustomPage.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
   })
 
-  data.allCustomPage.edges.forEach(({ node }) => {
-    createPage({
-      path: `/${node.id}`,
-      component: './src/pages/CustomPage.vue',
-      context: {
-        id: node.id
-      }
-    })
-  }) */
 }

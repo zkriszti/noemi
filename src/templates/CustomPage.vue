@@ -1,18 +1,20 @@
 <template>
   <Layout>
-    <h3>{{ $customPage.post.title }}</h3>
+    <h3>{{ $page.customPage.title }}</h3>
     <div class="date-meta-container">
-      <p>{{ $customPage.post.date }}</p>
+      THIS!
+      <p>{{ $page.customPage.id }}</p>
     </div>
-    <div v-html="$customPage.post.content" />
+    <div v-html="$page.customPage.content" />
   </Layout>
 </template>
 
 <page-query>
-query CustomPage ($path: String!) {
-  customPage: customPage (path: $path) {
+query customPage ($id: ID!) {
+  customPage (id: $id) {
+    id
     title
-    date
+    content
   }
 }
 </page-query>
@@ -21,18 +23,18 @@ query CustomPage ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$customPage.post.title
+      title: this.$page.customPage.title
     };
   }
 };
 </script>
 
-<style lang="stylus">
-h3
+<style>
+/* h3
   color: #777
   font-weight: normal
   display: flex
   align-items: center
-
+ */
 </style>
 
