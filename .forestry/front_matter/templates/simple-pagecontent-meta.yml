@@ -15,5 +15,5 @@ fields:
   label: slug
   description: The expression that references this page in the URL
 pages:
-- src/content/pages/testpage-created-in-forestry.md
 - src/content/pages/TestPage.md
+- src/content/pages/testpage-created-in-forestry.md
