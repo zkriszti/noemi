@@ -1,0 +1,25 @@
+---
+label: BlogPost Meta
+hide_body: false
+fields:
+- name: date
+  type: datetime
+  label: Date
+  description: 'Date of your blog post:'
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: post_title
+  type: text
+  config:
+    required: false
+  label: Post title
+  description: 'Title of your post:'
+- name: featured_image
+  type: file
+  config:
+    maxSize: '5'
+  label: Featured image
+  description: 'Add a featured image to this post:'
