@@ -23,5 +23,11 @@ fields:
     maxSize: '5'
   label: Featured image
   description: 'Add a featured image to this post:'
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+  description: Add a slug to your post that will appear in the URL.
 pages:
 - src/content/blog/post2.md
