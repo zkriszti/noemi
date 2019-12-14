@@ -10,13 +10,19 @@ module.exports = function (api) {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
   })
 
-  /* api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-      }
-    ) */
   api.createPages(async ({ graphql, createPage }) => {
+    // CREATE CUSTOM PAGES
     const { data } = await graphql(`{
       allCustomPage {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+
+      allBlogPost {
         edges {
           node {
             id
@@ -35,6 +41,27 @@ module.exports = function (api) {
         }
       })
     })
-  })
 
+    /* // CREATE POST PAGES
+    const { postData } = await graphql(`{
+      allBlogPost {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }`) */
+
+    data.allBlogPost.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.slug}`,
+        component: './src/templates/BlogPost.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+  })
 }
