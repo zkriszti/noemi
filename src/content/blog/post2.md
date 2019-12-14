@@ -2,6 +2,7 @@
 date: 2019-12-14T00:00:00+01:00
 post_title: Second - A post from Forestry interface
 featured_image: "/uploads/hannes-wolf--BVumYz08bE-unsplash.jpg"
+slug: post2
 
 ---
 Doggorino boof mlem clouds smol puggorino, thicc very jealous pupper smol borking doggo with a long snoot for pats doge boofers boof, snoot such treat tungg big ol pupper. 
