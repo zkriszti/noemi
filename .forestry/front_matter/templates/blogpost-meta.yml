@@ -8,10 +8,10 @@ fields:
   description: 'Date of your blog post:'
   config:
     required: false
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
-- name: post_title
+- name: title
   type: text
   config:
     required: false
