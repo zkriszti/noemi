@@ -11,7 +11,7 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
-- name: post_title
+- name: title
   type: text
   config:
     required: false
