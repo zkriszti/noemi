@@ -3,6 +3,7 @@
     <h1>Contact Noemi</h1>
     <p>This is a contact form here.</p>
     <form name="contact" method="POST" netlify netlify-honeypot="hpfield">
+      <input type="hidden" name="form-name" value="contact" />
       <div class="hpot">
         <label>Leave this field empty: <input name="hpfield"></label>
       </div>
