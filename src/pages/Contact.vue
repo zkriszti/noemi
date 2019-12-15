@@ -2,19 +2,28 @@
   <Layout>
     <h1>Contact Noemi</h1>
     <p>This is a contact form here.</p>
-    <form name="contact" method="POST" netlify netlify-honeypot="hpfield">
+    <form
+      name="contact"
+      method="POST"
+      netlify
+      netlify-honeypot="hpfield"
+      v-on:submit.prevent="handleSubmit"
+      action="/success/">
       <input type="hidden" name="contact" value="contact" />
       <div class="hpot">
         <label>Leave this field empty: <input name="hpfield"></label>
       </div>
       <p>
-        <label>Your Name: <input type="text" name="name" /></label>
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" v-model="formData.name" />
       </p>
       <p>
-        <label>Your Email: <input type="email" name="email" /></label>
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" v-model="formData.email" />
       </p>
       <p>
-        <label>Message: <textarea name="message"></textarea></label>
+        <label for="message">Message:</label>
+        <textarea name="message" v-model="formData.message"></textarea>
       </p>
       <button type="submit">Send</button>
     </form>
@@ -25,6 +34,33 @@
 export default {
   metaInfo: {
     title: 'Contact Noemi'
+  },
+
+  data() {
+    return {
+      formData: {},
+    }
+  },
+
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => this.$router.push('/success'))
+      .catch(error => alert(error))
+    }
   }
 }
 </script>
