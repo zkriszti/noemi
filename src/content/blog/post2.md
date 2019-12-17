@@ -1,7 +1,7 @@
 ---
 date: 2019-12-13T23:00:00.000+00:00
 title: Second - a post from Forestry interface
-featured_image: "/uploads/hannes-wolf--BVumYz08bE-unsplash.jpg"
+featured_image: "hannes-wolf--BVumYz08bE-unsplash.jpg"
 slug: post2
 
 ---
