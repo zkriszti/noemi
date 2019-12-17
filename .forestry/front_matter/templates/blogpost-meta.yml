@@ -30,4 +30,5 @@ fields:
   label: Slug
   description: Add a slug to your post that will appear in the URL.
 pages:
+- src/content/blog/TestPost.md
 - src/content/blog/post2.md
