@@ -17,7 +17,7 @@ sections:
   new_doc_ext: md
 upload_dir: noemi
 public_path: " https://res.cloudinary.com/zkriszti"
-front_matter_path: ''
+front_matter_path: https://res.cloudinary.com/zkriszti
 use_front_matter_path: true
 file_template: ":filename:"
 build:
