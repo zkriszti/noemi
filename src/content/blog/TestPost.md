@@ -2,6 +2,7 @@
 title: TestPost
 date: 13/12/2019
 slug: testpost
+featured_image: " https://res.cloudinary.com/zkriszti/v1576444484/noemi/test-img2.jpg"
 
 ---
 Eu eaque yet aliquid laboris or quia so molestiae. Anim fugit. Numquam aut nor cillum reprehenderit mollit velit nulla. Nostrud occaecat for unde. Doloremque omnis error. Laboris sequi. Corporis sint, so vitae ea. Ullam eu and adipisci ipsa or pariatur so eos.
