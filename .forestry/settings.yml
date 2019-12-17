@@ -16,7 +16,7 @@ sections:
   match: "**/*"
   new_doc_ext: md
 upload_dir: noemi
-public_path: ''
+public_path: " https://res.cloudinary.com/zkriszti"
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
