@@ -3,13 +3,11 @@
     <h1>Blog</h1>
     <div class="post-item-container">
       <div v-for="(edge, index) in $page.posts.edges" :key="edge.node.id" class="post-item">
-        <!-- {{ edge.node.id }} -->
         <h3 class="index"> {{index}} </h3>
         <g-link :to="edge.node.path" class="post-link">
           <div class="post-item-inner-top">
-            <g-image v-if="edge.node.featured_image" :src="edge.node.featured_image" class="post-image" width="180" :alt=" edge.node.blog_image_alt "/>
-            <!-- featured_image: "/uploads/hannes-wolf--BVumYz08bE-unsplash.jpg" -->
             <div class="f-img">featured-image: {{ edge.node.featured_image }} </div>
+            <img :src="`https://res.cloudinary.com/zkriszti/w_150${edge.node.featured_image}`" />
             <div class="post-date"><span>date: {{ edge.node.date }}</span></div>
           </div>
           <div class="post-item-inner-title">title: {{ edge.node.title }}</div>

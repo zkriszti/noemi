@@ -2,8 +2,7 @@
   <Layout>
     <h3>{{ $page.blogPost.title }}</h3>
     <div class="date-meta-container">
-      Hey, it's the blog!
-      <p>{{ $page.blogPost.id }}</p>
+      <img :src="`https://res.cloudinary.com/zkriszti/w_250${$page.blogPost.featured_image}`" />
     </div>
     <div v-html="$page.blogPost.content" />
   </Layout>
@@ -15,6 +14,7 @@ query blogPost ($id: ID!) {
     id
     title
     content
+    featured_image
   }
 }
 </page-query>
