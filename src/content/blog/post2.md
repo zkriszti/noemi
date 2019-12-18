@@ -3,6 +3,7 @@ date: 2019-12-13T23:00:00.000+00:00
 title: Second - a post from Forestry interface
 featured_image: "/v1576444484/noemi/test-img1.jpg"
 slug: post2
+featured_image_alt: a deer hiding in wheat field
 
 ---
 Doggorino boof mlem clouds smol puggorino, thicc very jealous pupper smol borking doggo with a long snoot for pats doge boofers boof, snoot such treat tungg big ol pupper.
