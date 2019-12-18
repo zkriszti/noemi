@@ -23,6 +23,16 @@ fields:
     maxSize: '5'
   label: Featured image
   description: 'Add a featured image to this post:'
+- name: featured_image_alt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: '"alt" tag for featured image'
+  description: Describe your image in a few words for better SEO.
 - name: slug
   type: text
   config:
