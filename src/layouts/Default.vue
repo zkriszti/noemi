@@ -1,17 +1,27 @@
 <template>
-  <div class="layout">
-    <SiteHeader />
+  <div :class="isSingle ? 'layout' : ''">
+    <SiteHeader v-if="isSingle" />
     <slot />
   </div>
 </template>
 
 <script>
+
 import SiteHeader from '@/layouts/SiteHeader.vue'
+
 export default {
   components: {
     SiteHeader
+  },
+
+  props: {
+    isSingle: {
+      type: Boolean,
+      default: false
+    }
   }
 }
+
 </script>
 
 

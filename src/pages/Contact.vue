@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :isSingle="routeSingle">
     <h1>Contact Noemi</h1>
     <p>This is a contact form here.</p>
     <form
@@ -39,6 +39,12 @@ export default {
   data() {
     return {
       formData: {},
+    }
+  },
+
+  computed: {
+    routeSingle () {
+      return this.$route.path !== '/'
     }
   },
 

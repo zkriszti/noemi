@@ -1,8 +1,8 @@
 <template>
-  <Layout>
+  <Layout :isSingle="routeSingle">
     <h1>Blog</h1>
     <div class="post-item-container">
-      <div v-for="(edge, index) in $page.posts.edges" :key="edge.node.id" class="post-item">
+      <div v-for="(edge, index) in $static.posts.edges" :key="edge.node.id" class="post-item">
         <h3 class="index"> {{index}} </h3>
         <g-link :to="edge.node.path" class="post-link">
           <div class="post-item-inner-top">
@@ -17,7 +17,7 @@
   </Layout>
 </template>
 
-<page-query>
+<static-query>
 query Posts {
   posts: allBlogPost {
     edges {
@@ -31,12 +31,18 @@ query Posts {
     }
   }
 }
-</page-query>
+</static-query>
 
 <script>
 export default {
   metaInfo: {
     title: 'Blog'
+  },
+
+  computed: {
+    routeSingle () {
+      return this.$route.path !== '/'
+    }
   }
 }
 
