@@ -1,27 +1,19 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link class="nav__link" to="/contact/">Contact</g-link>
-        <g-link class="nav__link" to="/blog/">Blog</g-link>
-      </nav>
-    </header>
-    <slot/>
+    <SiteHeader />
+    <slot />
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<script>
+import SiteHeader from '@/layouts/SiteHeader.vue'
+export default {
+  components: {
+    SiteHeader
   }
 }
-</static-query>
+</script>
+
 
 <style>
 body {
@@ -36,17 +28,5 @@ body {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
 }
 </style>
