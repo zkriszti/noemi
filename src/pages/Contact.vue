@@ -1,5 +1,5 @@
 <template>
-  <Layout :isSingle="routeSingle">
+  <Layout :isSingle="routeSingle" id="contact">
     <h1>Contact Noemi</h1>
     <p>This is a contact form here.</p>
     <form

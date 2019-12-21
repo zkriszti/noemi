@@ -1,5 +1,5 @@
 <template>
-  <Layout :isSingle="routeSingle">
+  <Layout :isSingle="routeSingle" id="blog">
     <h1>Blog</h1>
     <div class="post-item-container">
       <div v-for="(edge, index) in $static.posts.edges" :key="edge.node.id" class="post-item">

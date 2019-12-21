@@ -1,25 +1,23 @@
 {
-  "Noémi Site Data": {
-    "SocialMedia": {
-      "facebook": "https://facebook.com/shefindsfocus2",
-      "linkedin": "https://linkedin.com/shefindsfocus2"
+  "SocialMedia": {
+    "facebook": "https://facebook.com/shefindsfocus2",
+    "linkedin": "https://linkedin.com/shefindsfocus2"
+  },
+  "ContactData": {
+    "email": "noemi@shefindsfocus.com"
+  },
+  "Prices": {
+    "package1": {
+      "name": "Super Affordable Package",
+      "price": 250
     },
-    "ContactData": {
-      "email": "noemi@shefindsfocus.com"
+    "package2": {
+      "name": "Awesome Package",
+      "price": 350
     },
-    "Prices": {
-      "package1": {
-        "name": "Super Affordable Package",
-        "price": 250
-      },
-      "package2": {
-        "name": "Awesome Package",
-        "price": 350
-      },
-      "package3": {
-        "name": "World Domination Package",
-        "price": 450
-      }
+    "package3": {
+      "name": "World Domination Package",
+      "price": 450
     }
   }
 }
