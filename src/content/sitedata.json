@@ -1,0 +1,25 @@
+{
+  "siteData": {
+    "socialMedia": {
+      "facebook": "https://facebook.com/shefindsfocus",
+      "linkedin": "https://linkedin.com/shefindsfocus"
+    },
+    "contactData": {
+      "email": "noemi@shefindsfocus.com"
+    },
+    "prices": {
+      "package1": {
+        "name": "Super Affordable Package",
+        "price": 250
+      },
+      "package2": {
+        "name": "Awesome Package",
+        "price": 350
+      },
+      "package3": {
+        "name": "World Domination Package",
+        "price": 450
+      }
+    }
+  }
+}
