@@ -1,13 +1,13 @@
 {
-  "siteData": {
-    "socialMedia": {
+  "Noémi Site Data": {
+    "SocialMedia": {
       "facebook": "https://facebook.com/shefindsfocus",
       "linkedin": "https://linkedin.com/shefindsfocus"
     },
-    "contactData": {
+    "ContactData": {
       "email": "noemi@shefindsfocus.com"
     },
-    "prices": {
+    "Prices": {
       "package1": {
         "name": "Super Affordable Package",
         "price": 250
