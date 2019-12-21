@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: src/content/sitedata.json
+  label: Noemi Site Data
+  match: "**/*"
 - type: directory
   path: src/content/blog
   label: Blog
