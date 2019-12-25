@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import SiteHeader from '@/layouts/SiteHeader.vue'
-
 import About from '@/pages/About.vue'
 import Contact from '@/pages/Contact.vue'
 import Blog from '@/pages/Blog.vue'
@@ -26,8 +24,6 @@ export default {
   },
 
   components: {
-    SiteHeader,
-
     About,
     Contact,
     Blog
@@ -37,8 +33,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .layout
+/*   .layout
     max-width: 760px
-    margin: 0 auto
+    margin: 0 auto */
 
 </style>
