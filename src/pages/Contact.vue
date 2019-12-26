@@ -7,8 +7,7 @@
       method="POST"
       netlify
       netlify-honeypot="hpfield"
-      v-on:submit.prevent="handleSubmit"
-      action="/success/">
+      v-on:submit.prevent="handleSubmit">
       <input type="hidden" name="contact" value="contact" />
       <div class="hpot">
         <label>Leave this field empty: <input name="hpfield"></label>
