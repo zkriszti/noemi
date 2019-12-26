@@ -1,7 +1,5 @@
 <template>
   <header class="header" ref="header">
-
-    <!-- <g-link to="/">{{ $static.metadata.siteName }}</g-link> -->
     <div class="header-top">
       <div class="logo"><g-link to="/"><img src="https://res.cloudinary.com/zkriszti/image/upload/v1577305426/noemi/labdalogo_only.png" alt="" class="logo"></g-link></div>
       <div class="hamburger" @click="toggleHamburger">
@@ -14,11 +12,11 @@
       <g-link class="nav__link" to="/">Home</g-link>
 <!--       <g-link class="nav__link" to="/blog/">Blog -- SA</g-link>
       <g-link class="nav__link" to="/about/">About -- SA</g-link> -->
-      <g-link class="nav__link" to="/#about">About</g-link>
+      <!-- <g-link class="nav__link" to="/#about">About</g-link>
       <g-link class="nav__link" to="/#contact">Contact</g-link>
-      <g-link class="nav__link" to="/#blog">Blog</g-link>
+      <g-link class="nav__link" to="/#blog">Blog</g-link> -->
+      <g-link class="nav__link" v-for="(item, index) in menuData" :key="index" :to="item.route" >{{item.slug}}</g-link>
     </nav>
-
   </header>
 </template>
 
@@ -32,9 +30,14 @@ query {
 
 <script>
 export default {
+  props: {
+    isIndex: Boolean,
+    default: false
+  },
+
   data () {
     return {
-      isHamburgerOpen: false
+      isHamburgerOpen: false,
     }
   },
 
@@ -47,6 +50,26 @@ export default {
   computed: {
     menuVisible () {
       return this.$mq === 'lg' || this.isHamburgerOpen
+    },
+
+    menuData () {
+      return [
+        {
+          route: this.isIndex ? '/#about' : '/about/',
+          slug: 'About',
+          isAnchor: this.isIndex
+        },
+        {
+          route: this.isIndex ? '/#contact' : '/contact/',
+          slug: 'Contact',
+          isAnchor: this.isIndex
+        },
+        {
+          route: this.isIndex ? '/#blog' : '/blog/',
+          slug: 'Blog',
+          isAnchor: this.isIndex
+        },
+      ]
     }
   }
 

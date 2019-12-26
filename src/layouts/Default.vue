@@ -1,6 +1,6 @@
 <template>
   <div :class="[isSingle ? 'layout' : '', screenClass]" >
-    <SiteHeader v-if="isSingle" />
+    <SiteHeader v-if="isSingle" :isIndex="isIndex"/>
     <div class="content"><slot /></div>
     <SiteFooter v-if="isSingle" />
   </div>
@@ -26,6 +26,10 @@ export default {
   computed: {
     screenClass () {
       return `screen-${this.$mq}`
+    },
+
+    isIndex () {
+      return this.$route.path === '/'
     }
   }
 }
