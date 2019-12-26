@@ -28,6 +28,7 @@
       <input type="checkbox" name="acceptConditions" v-model="formData.acceptConditionsChecked">
       <label for="checkbox">I accept the Terms & Conditions.</label>
       <button type="submit" :disabled="!formData.acceptConditionsChecked">Send</button>
+      <div class="message-success" v-if="showSuccessMessage">Thank you so much, your message has been sent! I'll get back to you in X business days.</div>
     </form>
   </Layout>
 </template>
@@ -40,10 +41,10 @@ export default {
 
   data() {
     return {
+      showSuccessMessage: false,
       formData: {
         acceptConditionsChecked: false
       }
-
     }
   },
 
@@ -69,16 +70,19 @@ export default {
           ...this.formData,
         }),
       })
-      .then(() => this.$router.push('/success'))
+      // .then(() => this.$router.push('/success'))
+      .then(() => this.showSuccessMessage = true)
       .catch(error => alert(error))
     }
   }
 }
 </script>
 
-<style scoped>
-  .hpot {
-  display: none;
-}
+<style lang="stylus" scoped>
+.hpot
+  display: none
+
+.message-success
+  background: rgba(12,200,12,0.3)
 
 </style>
