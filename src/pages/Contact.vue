@@ -25,7 +25,9 @@
         <label for="message">Message:</label>
         <textarea name="message" v-model="formData.message"></textarea>
       </p>
-      <button type="submit">Send</button>
+      <input type="checkbox" id="checkbox" v-model="formData.acceptConditionsChecked">
+      <label for="checkbox">I accept the Terms & Conditions.</label>
+      <button type="submit" :disabled="!formData.acceptConditionsChecked">Send</button>
     </form>
   </Layout>
 </template>
@@ -38,7 +40,10 @@ export default {
 
   data() {
     return {
-      formData: {},
+      formData: {
+        acceptConditionsChecked: false
+      }
+
     }
   },
 
