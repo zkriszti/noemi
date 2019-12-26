@@ -11,7 +11,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "gridsome": "^0.7.0",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^2.1.2",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
