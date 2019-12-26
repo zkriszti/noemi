@@ -16,6 +16,15 @@ export default function (Vue, { router, head, isClient }) {
 
   head.htmlAttrs = { style: 'scroll-behavior: smooth' }
 
+  router.options.scrollBehavior = (to, from, savedPosition) => {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        offset: { x: 0, y: 130 }
+      }
+    }
+  }
+
   Vue.use(VueMq, {
     breakpoints: {
       xs: 449,

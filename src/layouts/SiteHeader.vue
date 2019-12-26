@@ -2,24 +2,23 @@
   <header class="header" ref="header">
 
     <!-- <g-link to="/">{{ $static.metadata.siteName }}</g-link> -->
-    <div class="logo"><g-link to="/"><img src="https://res.cloudinary.com/zkriszti/image/upload/v1577305426/noemi/labdalogo_only.png" alt="" class="logo"></g-link></div>
-
-    <div class="hamburger" @click="toggleHamburger">
-      <span class="hamburger-row"></span>
-      <span class="hamburger-row"></span>
-      <span class="hamburger-row"></span>
+    <div class="header-top">
+      <div class="logo"><g-link to="/"><img src="https://res.cloudinary.com/zkriszti/image/upload/v1577305426/noemi/labdalogo_only.png" alt="" class="logo"></g-link></div>
+      <div class="hamburger" @click="toggleHamburger">
+        <span class="hamburger-row"></span>
+        <span class="hamburger-row"></span>
+        <span class="hamburger-row"></span>
+      </div>
     </div>
     <nav class="nav" v-if="menuVisible">
       <g-link class="nav__link" to="/">Home</g-link>
-      <!-- <a class="nav__link" href="#about">About</a>
-      <a class="nav__link" href="#contact">Contact</a>
-      <a class="nav__link" href="#blog">Blog</a> -->
 <!--       <g-link class="nav__link" to="/blog/">Blog -- SA</g-link>
       <g-link class="nav__link" to="/about/">About -- SA</g-link> -->
       <g-link class="nav__link" to="/#about">About</g-link>
       <g-link class="nav__link" to="/#contact">Contact</g-link>
       <g-link class="nav__link" to="/#blog">Blog</g-link>
     </nav>
+
   </header>
 </template>
 
@@ -61,33 +60,40 @@ logoHeight = 120px
 
 .header
   display: flex
-  justify-content: space-between
-  align-items: center
+  flex-direction: column
   margin-bottom: 20px
   padding: 0 20px
   background: light-blue
+  position: sticky
+  top: 0
+  box-shadow: 0px 3px 5px 0px rgba(170,170,170,1)
 
-  .logo
-    width: logoHeight
-    height: logoHeight
+  .header-top
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    background-color: #eee
 
-  .hamburger
-    cursor: pointer
+    .logo
+      width: logoHeight
+      height: logoHeight
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #eee
 
-    .hamburger-row
-      background-color: #111
-      height: 6px
-      width: 34px
-      display: block
-      margin-bottom: 4px
-      border-radius: 3px
+    .hamburger
+      cursor: pointer
+
+      .hamburger-row
+        background-color: #111
+        height: 6px
+        width: 34px
+        display: block
+        margin-bottom: 4px
+        border-radius: 3px
 
   nav
-    position: absolute
+    /* position: absolute */
     top: logoHeight
     left: 0
     width: 100%
@@ -105,8 +111,13 @@ logoHeight = 120px
 
 .screen-lg
   .header
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
     .hamburger
       display: none
+
     nav
       display: inline-flex
       position: relative
