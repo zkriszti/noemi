@@ -33,8 +33,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-/*   .layout
-    max-width: 760px
-    margin: 0 auto */
 
 </style>
