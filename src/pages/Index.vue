@@ -3,7 +3,7 @@
 
     <div class="hero">
       <!-- <g-image alt="Example image" src="~/n1.jpg" /> -->
-      <g-image alt="Example image" :src="siteData.HeroImageURL" />
+      <g-image alt="Example image" :src="siteData.Hero.HeroImageURL" />
       <h1>She finds focus</h1>
       <div class="hero-content">
         <p>It's Noemi's digital marketing & SEO consulting page.</p>
