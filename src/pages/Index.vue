@@ -2,7 +2,8 @@
   <Layout isSingle class="index">
 
     <div class="hero">
-      <g-image alt="Example image" src="~/n1.jpg" />
+      <!-- <g-image alt="Example image" src="~/n1.jpg" /> -->
+      <g-image alt="Example image" :src="siteData.HeroImageURL" />
       <h1>She finds focus</h1>
       <div class="hero-content">
         <p>It's Noemi's digital marketing & SEO consulting page.</p>
@@ -20,6 +21,8 @@
 </template>
 
 <script>
+import siteData from "@/content/sitedata.json"
+
 import Services from '@/pages/Services.vue'
 import About from '@/pages/About.vue'
 import Prices from '@/pages/Prices.vue'
@@ -37,6 +40,12 @@ export default {
     Prices,
     Contact,
     Blog
+  },
+
+  data () {
+    return {
+      siteData: siteData
+    }
   }
 }
 
