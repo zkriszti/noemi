@@ -4,6 +4,23 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueMq from 'vue-mq'
 
+import '~/assets/fonts.styl'
+import '~/assets/colors.styl'
+
+// Load Montserrat typeface
+require('typeface-montserrat')
+// Load Open Sans typeface
+require('typeface-open-sans')
+
+// Set up FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { faInstagram, faPinterest, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false;
+library.add(faInstagram, faPinterest, faLinkedin)
+
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
@@ -14,6 +31,7 @@ export default function (Vue, { router, head, isClient }) {
     content: 'Noemi Mate | Digital Marketing & SEO Consultant from Budapest, Hungary'
   })
 
+  // Handle anchor scrolling
   head.htmlAttrs = { style: 'scroll-behavior: smooth' }
 
   router.options.scrollBehavior = (to, from, savedPosition) => {
@@ -25,6 +43,7 @@ export default function (Vue, { router, head, isClient }) {
     }
   }
 
+  // Set media query breakpoints
   Vue.use(VueMq, {
     breakpoints: {
       xs: 449,
@@ -33,4 +52,7 @@ export default function (Vue, { router, head, isClient }) {
       lg: Infinity,
     }
   })
+
+  // Use FontAwesome
+  Vue.component('font-awesome', FontAwesomeIcon)
 }

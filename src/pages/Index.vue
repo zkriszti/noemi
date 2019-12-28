@@ -1,20 +1,28 @@
 <template>
-  <Layout isSingle>
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
+  <Layout isSingle class="index">
 
-    <h1>She finds focus</h1>
+    <div class="hero">
+      <g-image alt="Example image" src="~/n1.jpg" />
+      <h1>She finds focus</h1>
+      <div class="hero-content">
+        <p>It's Noemi's digital marketing & SEO consulting page.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
+      </div>
+    </div>
 
-    <p>It's Noemi's digital marketing & SEO consulting page.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-
+    <Services />
     <About />
+    <Prices />
     <Contact />
     <Blog />
+
   </Layout>
 </template>
 
 <script>
+import Services from '@/pages/Services.vue'
 import About from '@/pages/About.vue'
+import Prices from '@/pages/Prices.vue'
 import Contact from '@/pages/Contact.vue'
 import Blog from '@/pages/Blog.vue'
 
@@ -24,7 +32,9 @@ export default {
   },
 
   components: {
+    Services,
     About,
+    Prices,
     Contact,
     Blog
   }
@@ -33,5 +43,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+img
+  max-width: 100%
+.hero-content
+  padding: 0 20px
 </style>

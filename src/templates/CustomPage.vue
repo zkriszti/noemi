@@ -28,13 +28,3 @@ export default {
   }
 };
 </script>
-
-<style>
-/* h3
-  color: #777
-  font-weight: normal
-  display: flex
-  align-items: center
- */
-</style>
-

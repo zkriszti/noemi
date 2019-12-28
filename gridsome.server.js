@@ -42,18 +42,6 @@ module.exports = function (api) {
       })
     })
 
-    /* // CREATE POST PAGES
-    const { postData } = await graphql(`{
-      allBlogPost {
-        edges {
-          node {
-            id
-            slug
-          }
-        }
-      }
-    }`) */
-
     data.allBlogPost.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,

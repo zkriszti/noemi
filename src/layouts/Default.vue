@@ -36,13 +36,11 @@ export default {
 
 </script>
 
-
 <style lang="stylus">
 *
   box-sizing: border-box
 
 body
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
   margin: 0
   padding: 0
   line-height: 1.5
@@ -53,9 +51,16 @@ body
     display: flex
     min-height: 100vh
     flex-direction: column
+    &:not(.index)
+      .content
+        padding: 0 20px
+    &.index
+      .content
+        .content
+          padding: 0 20px 12px 20px
 
   .content
-    padding: 0 20px
     flex-grow: 1
+
 
 </style>

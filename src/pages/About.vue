@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import siteData from "@/content/sitedata.json"
 export default {
 
   metaInfo: {
@@ -17,10 +16,6 @@ export default {
     routeSingle () {
       return this.$route.path !== '/'
     }
-  },
-
-  mounted () {
-    console.log(siteData.Prices)
   }
 }
 </script>

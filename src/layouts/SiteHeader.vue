@@ -10,11 +10,6 @@
     </div>
     <nav class="nav" v-if="menuVisible">
       <g-link class="nav__link" to="/">Home</g-link>
-<!--       <g-link class="nav__link" to="/blog/">Blog -- SA</g-link>
-      <g-link class="nav__link" to="/about/">About -- SA</g-link> -->
-      <!-- <g-link class="nav__link" to="/#about">About</g-link>
-      <g-link class="nav__link" to="/#contact">Contact</g-link>
-      <g-link class="nav__link" to="/#blog">Blog</g-link> -->
       <g-link class="nav__link" v-for="(item, index) in menuData" :key="index" :to="item.route" >{{item.slug}}</g-link>
     </nav>
   </header>
@@ -55,8 +50,18 @@ export default {
     menuData () {
       return [
         {
+          route: this.isIndex ? '/#services' : '/services/',
+          slug: 'Services',
+          isAnchor: this.isIndex
+        },
+        {
           route: this.isIndex ? '/#about' : '/about/',
           slug: 'About',
+          isAnchor: this.isIndex
+        },
+        {
+          route: this.isIndex ? '/#prices' : '/prices/',
+          slug: 'Prices',
           isAnchor: this.isIndex
         },
         {
@@ -77,18 +82,17 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/colors.styl'
 
 logoHeight = 120px
 
 .header
   display: flex
   flex-direction: column
-  margin-bottom: 20px
   padding: 0 20px
-  background: light-blue
+  background: light-grey
   position: sticky
   top: 0
+  z-index: 99
   box-shadow: 0px 3px 5px 0px rgba(170,170,170,1)
 
   .header-top
@@ -102,7 +106,6 @@ logoHeight = 120px
       display: flex
       justify-content: center
       align-items: center
-      background-color: #eee
 
     .hamburger
       cursor: pointer
@@ -116,19 +119,18 @@ logoHeight = 120px
         border-radius: 3px
 
   nav
-    /* position: absolute */
     top: logoHeight
     left: 0
     width: 100%
     padding: 0 20px
-    background: light-blue
+    text-align: right
 
     .nav__link
-      margin-left: 20px
+      margin: 0 0 12px 20px
       display: block
-      text-decoration: none
       color: #111
       text-transform: uppercase
+      font-size: 1.2em
       &:visited
         color: #111
 
@@ -146,5 +148,6 @@ logoHeight = 120px
       position: relative
       width: auto
       top: 0
+      text-align: auto
 
 </style>

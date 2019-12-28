@@ -12,18 +12,17 @@
       <div class="hpot">
         <label>Leave this field empty: <input name="hpfield"></label>
       </div>
-      <p>
+
+      <div class="form-grid">
         <label for="name">Your Name:</label>
         <input type="text" name="name" v-model="formData.name" />
-      </p>
-      <p>
+
         <label for="email">Your Email:</label>
         <input type="email" name="email" v-model="formData.email" />
-      </p>
-      <p>
+
         <label for="message">Message:</label>
         <textarea name="message" v-model="formData.message"></textarea>
-      </p>
+      </div>
       <input type="checkbox" name="acceptConditions" v-model="formData.acceptConditionsChecked">
       <label for="checkbox">I accept the Terms & Conditions.</label>
       <button type="submit" :disabled="!formData.acceptConditionsChecked">Send</button>
@@ -33,7 +32,9 @@
 </template>
 
 <script>
+
 export default {
+
   metaInfo: {
     title: 'Contact Noemi'
   },
@@ -78,8 +79,23 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+#contact
+  background: #eee
+
 .hpot
   display: none
+
+.form-grid
+  display: grid
+  grid-template-columns: auto 1fr
+  grid-auto-flow: rows
+  grid-column-gap: 24px
+  grid-row-gap: 12px
+  margin-bottom: 18px
+
+input
+textarea
+  border: 0px
 
 .message-success
   background: rgba(12,200,12,0.3)

@@ -1,11 +1,20 @@
 <template>
   <footer class="footer" ref="footer">
     <!-- <g-link to="/">{{ $static.metadata.siteName }}</g-link> -->
-    <div class="footer-social">
-      <p>instagram (ikon)</p>
-      <p>pinterest (ikon)</p>
-      <p>linkedin (ikon)</p>
-      <p>kötelezők (impresszum, ászf / disclaimer, privacy policy, terms of conditions)</p>
+    <div class="social">
+      <h4>Let's connect!</h4>
+      <div class="social-icons">
+        <g-link :to="siteData.SocialMedia.instagram"><font-awesome :icon="['fab', 'instagram']" size="2x" /></g-link>
+        <g-link :to="siteData.SocialMedia.pinterest"><font-awesome :icon="['fab', 'pinterest']" size="2x" /></g-link>
+        <g-link :to="siteData.SocialMedia.linkedin"><font-awesome :icon="['fab', 'linkedin']" size="2x" /></g-link>
+      </div>
+    </div>
+    <div class="must-haves">
+      <h4>The boring must-haves</h4>
+      <g-link class="disclaimer" to="/disclaimer">Disclaimer</g-link>
+      <g-link class="privacy" to="/privacy">Privacy policy</g-link>
+      <g-link class="terms" to="/terms">Terms & Conditions</g-link>
+      <!-- <p>HU: impresszum, ászf / EN: disclaimer, privacy policy, terms of conditions)</p> -->
     </div>
   </footer>
 </template>
@@ -19,17 +28,32 @@ query {
 </static-query>
 
 <script>
-export default {
+import siteData from "@/content/sitedata.json"
 
+export default {
+  data () {
+    return {
+      siteData: siteData
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/colors.styl'
 
 footer
   background: #eee
+  padding: 0 20px 12px 20px
+
   p:last-child
     margin-bottom: 0
+
+  .social-icons
+    a
+    a:visited
+      color: #444
+
+      svg
+        margin-right: 20px
 
 </style>
