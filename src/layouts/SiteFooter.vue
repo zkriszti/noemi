@@ -45,15 +45,26 @@ footer
   background: #eee
   padding: 0 20px 12px 20px
 
+  a
+  a:visited
+    color: #444
+
+  h4
+    font-weight: 300
+
   p:last-child
     margin-bottom: 0
 
   .social-icons
-    a
-    a:visited
-      color: #444
+    margin-left: 12px
 
-      svg
-        margin-right: 20px
+    svg
+      margin-right: 20px
+
+  .must-haves
+    a
+      display: block
+      margin-left: 12px
+      font-size: 0.9em
 
 </style>

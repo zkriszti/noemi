@@ -7,7 +7,7 @@
           <h3 class="post-item-inner-title">{{ edge.node.title }}</h3>
           <div class="post-item-inner-top">
             <img :src="`https://res.cloudinary.com/zkriszti/w_150${edge.node.featured_image}`" :alt="edge.node.featured_image_alt" />
-            <div class="post-date"><span>date: {{ edge.node.date }}</span></div>
+            <div class="post-date"><span>date: {{ `${new Date(edge.node.date).getFullYear()}` }} </span></div>
           </div>
         </g-link>
       </div>
@@ -40,6 +40,10 @@ export default {
   computed: {
     routeSingle () {
       return this.$route.path !== '/'
+    },
+
+    formattedDate () {
+      return this.$static.posts.edges.node.date.getFullYear()
     }
   }
 }
