@@ -1,6 +1,6 @@
 ---
 title: TestPost
-date: 13/12/2019
+date: 2019-12-12T00:00:00+01:00
 slug: testpost
 featured_image: "/v1576444484/noemi/test-img2.jpg"
 featured_image_alt: kids having fun in the rain
