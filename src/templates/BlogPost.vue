@@ -4,7 +4,8 @@
     <div class="date-meta-container">
       <img :src="`https://res.cloudinary.com/zkriszti/w_250${$page.blogPost.featured_image}`" :alt="$page.blogPost.featured_image_alt" />
     </div>
-    <div v-html="$page.blogPost.content" />
+    <!-- <div v-html="$page.blogPost.content" /> -->
+    <div v-html="trimmedFullContent" />
   </Layout>
 </template>
 
@@ -26,6 +27,12 @@ export default {
     return {
       title: this.$page.blogPost.title
     };
+  },
+
+  computed: {
+    trimmedFullContent () {
+      const regex = /--SHOWMORETAG--/gi
+      return this.$page.blogPost.content.replace(regex, '')}
   }
-};
+}
 </script>

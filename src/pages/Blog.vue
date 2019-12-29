@@ -10,6 +10,7 @@
             <!-- <div class="post-date"><span>date: {{ `${new Date(edge.node.date).getFullYear()}` }} </span></div> -->
             <div class="post-date"><span>date: {{ edge.node.date }} </span></div>
           </div>
+          <div v-html="splitContent(edge.node.content)[0]" />
         </g-link>
       </div>
     </div>
@@ -26,6 +27,7 @@ query Posts {
         date(format: "MMMM DD, YYYY")
         featured_image
         featured_image_alt
+        content
       }
     }
   }
@@ -41,6 +43,12 @@ export default {
   computed: {
     routeSingle () {
       return this.$route.path !== '/'
+    }
+  },
+
+  methods: {
+    splitContent (c) {
+      return c.split("--SHOWMORETAG--")
     }
   }
 }
