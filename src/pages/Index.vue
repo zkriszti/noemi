@@ -3,14 +3,38 @@
 
     <div class="hero">
       <div class="hero-top">
-        <img alt="Example image"
+        <!-- <img alt="Example image"
           :srcset="`
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,w_450${siteData.Hero.HeroImageURL} 450w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_768,h_300${siteData.Hero.HeroImageURL} 768w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1024,h_350${siteData.Hero.HeroImageURL} 1024w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1920,h_550${siteData.Hero.HeroImageURL} 1920w
+          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,w_450${siteData.Hero.HeroImageURL} 450w,
+          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_768,h_300${siteData.Hero.HeroImageURL} 768w,
+          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_1024,h_350${siteData.Hero.HeroImageURL} 1024w,
+          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_1920,h_550${siteData.Hero.HeroImageURL} 1920w
           `"
-          :src="`https://res.cloudinary.com/zkriszti/f_auto,q_70,w_1920${siteData.Hero.HeroImageURL}`" />
+          :src="`https://res.cloudinary.com/zkriszti/f_auto,q_70,w_1920${siteData.Hero.HeroImageURL}`" /> -->
+
+        <picture>
+          <source
+          media="(max-width: 450px)"
+          :srcset="`https://res.cloudinary.com/zkriszti/f_auto,q_70,w_450${siteData.Hero.HeroImageURL} 1x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,w_900${siteData.Hero.HeroImageURL} 2x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,w_1350${siteData.Hero.HeroImageURL} 3x `">
+          <source
+          media="(max-width: 768px)"
+          :srcset="`https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_768,h_300${siteData.Hero.HeroImageURL} 1x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1536,h_600${siteData.Hero.HeroImageURL} 2x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_2304,h_900${siteData.Hero.HeroImageURL} 3x `">
+          <source
+          media="(max-width: 1024px)"
+          :srcset="`https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1024,h_350${siteData.Hero.HeroImageURL} 1x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_2048,h_700${siteData.Hero.HeroImageURL} 2x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_3072,h_1050${siteData.Hero.HeroImageURL} 3x `">
+          <source
+          :srcset="`https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1920,h_550${siteData.Hero.HeroImageURL} 1x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_3840,h_1100${siteData.Hero.HeroImageURL} 2x,
+            https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_5760,h_1650${siteData.Hero.HeroImageURL} 3x `">
+          <img :src="`https://res.cloudinary.com/zkriszti/f_auto,q_70,c_fill,w_1920,h_550${siteData.Hero.HeroImageURL}`" />
+        </picture>
+
         <h1><span>She</span><span>finds</span><span>focus</span></h1>
       </div>
       <div class="hero-content">
