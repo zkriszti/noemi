@@ -1,6 +1,6 @@
 <template>
   <div class="learn-more">
-    <g-link :to="target" :style="`color: ${baseColor}; border: 1px solid  ${baseColor};`" :class="hasShadow ? 'shadow' : '' ">{{ learnMoreText }}</g-link>
+    <g-link :to="target" :style="`color: ${borderBaseColor}; border: ${borderWeight} ${borderBaseColor};`" :class="hasShadow ? 'shadow' : '' ">{{ learnMoreText }}</g-link>
   </div>
 </template>
 
@@ -15,7 +15,11 @@ export default {
       type: String,
       required: true
     },
-    baseColor: {
+    borderWeight: {
+      type: String,
+      default: '1px solid'
+    },
+    borderBaseColor: {
       type: String,
       default: '#444'
     },

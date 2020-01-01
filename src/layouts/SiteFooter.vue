@@ -42,8 +42,9 @@ export default {
 <style lang="stylus" scoped>
 
 footer
-  background: #eee
+  background: #bbb
   padding: 0 20px 12px 20px
+  margin-top: 20px
 
   a
   a:visited

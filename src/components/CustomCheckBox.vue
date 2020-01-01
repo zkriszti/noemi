@@ -2,7 +2,7 @@
   <div>
     <label class="control control-checkbox">
         {{labelText}}
-        <input type="checkbox" v-model="value" />
+        <input type="checkbox" v-model="value" :name="name"/>
         <div class="control_indicator"></div>
     </label>
   </div>

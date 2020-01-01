@@ -62,5 +62,4 @@ body
   .content
     flex-grow: 1
 
-
 </style>

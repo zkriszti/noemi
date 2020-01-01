@@ -23,7 +23,8 @@
         <label for="message">Message:</label>
         <textarea name="message" v-model="formData.message"></textarea>
       </div>
-      <input type="checkbox" name="acceptConditions" v-model="formData.acceptConditionsChecked">
+      <!-- <input type="checkbox" name="acceptConditions" v-model="formData.acceptConditionsChecked"> -->
+      <CustomCheckBox type="checkbox" name="acceptConditions" @input="toggleConditions" />
       <label for="checkbox">I accept the Terms & Conditions.</label>
       <button type="submit" :disabled="!formData.acceptConditionsChecked">Send</button>
       <div class="message-success" v-if="showSuccessMessage">Thank you so much, your message has been sent! I'll get back to you in X business days.</div>
@@ -32,8 +33,13 @@
 </template>
 
 <script>
+import CustomCheckBox from '@/components/CustomCheckBox.vue'
 
 export default {
+
+  components: {
+    CustomCheckBox
+  },
 
   metaInfo: {
     title: 'Contact Noemi'
@@ -73,6 +79,10 @@ export default {
       // .then(() => this.$router.push('/success'))
       .then(() => this.showSuccessMessage = true)
       .catch(error => alert(error))
+    },
+
+    toggleConditions () {
+      this.formData.acceptConditionsChecked = !this.formData.acceptConditionsChecked
     }
   }
 }
@@ -81,6 +91,9 @@ export default {
 <style lang="stylus" scoped>
 #contact
   background: #eee
+
+form
+  max-width: 480px
 
 .hpot
   display: none

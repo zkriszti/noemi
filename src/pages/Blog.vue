@@ -5,12 +5,12 @@
       <div v-for="edge in $static.posts.edges" :key="edge.node.id" class="post-item">
         <g-link :to="edge.node.path" class="post-link">
           <h3 class="post-item-inner-title">{{ edge.node.title }}</h3>
+          <div class="post-date"><span>{{ edge.node.date }}</span></div>
           <div class="post-item-inner-top">
             <img :src="`https://res.cloudinary.com/zkriszti/w_150${edge.node.featured_image}`" :alt="edge.node.featured_image_alt" />
-            <!-- <div class="post-date"><span>date: {{ `${new Date(edge.node.date).getFullYear()}` }} </span></div> -->
-            <div class="post-date"><span>date: {{ edge.node.date }} </span></div>
           </div>
-          <div v-html="splitContent(edge.node.content)[0]" />
+          <div class="blog-teaser" v-html="splitContent(edge.node.content)[0]" />
+          <learn-more-ref :target="edge.node.path" learnMoreText="Read the whole story"></learn-more-ref>
         </g-link>
       </div>
     </div>
@@ -35,9 +35,15 @@ query Posts {
 </static-query>
 
 <script>
+import LearnMoreRef from '@/components/LearnMoreRef.vue'
+
 export default {
   metaInfo: {
     title: 'Blog'
+  },
+
+  components: {
+    LearnMoreRef
   },
 
   computed: {
@@ -56,11 +62,28 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+.post-item-container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 40px
+
+  .post-item
+    background: rgb(255,255,255)
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(240,240,240,1) 100%)
+    padding: 0 12px 24px 12px
+
 a
 a:visited
   color: #40B9A9
-  .post-item-inner-title
+
+.post-item-inner-title
     font-family: 'Montserrat'
     font-weight: 200
+    font-size: 1.6em
+
+.blog-teaser
+  color: #777
+  line-height: 1.7
 
 </style>
