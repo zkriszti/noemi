@@ -64,10 +64,6 @@ export default {
 <style lang="stylus" scoped>
 
 .post-item-container
-  display: grid
-  grid-template-columns: repeat(2, 1fr)
-  grid-gap: 40px
-
   .post-item
     background: rgb(255,255,255)
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(240,240,240,1) 100%)
@@ -85,5 +81,12 @@ a:visited
 .blog-teaser
   color: #777
   line-height: 1.7
+
+.screen-md
+.screen-lg
+  .post-item-container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 40px
 
 </style>
