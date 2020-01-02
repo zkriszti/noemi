@@ -5,7 +5,7 @@
         <span class="control_indicator">
           <font-awesome :icon="['fas', 'check']" size="1x" v-if="value" :style="{ color: '#eee' }" />
         </span>
-        {{labelText}}
+        <span class="label-text">{{labelText}}</span>
     </label>
   </div>
 </template>
