@@ -24,7 +24,9 @@
         <textarea name="message" v-model="formData.message"></textarea>
       </div>
       <!-- <input type="checkbox" name="acceptConditions" v-model="formData.acceptConditionsChecked"> -->
-      <CustomCheckBox type="checkbox" name="acceptConditions" @input="toggleConditions" />
+      <!-- <CustomCheckBox type="checkbox" name="acceptConditions" @input="toggleConditions" /> -->
+      <CustomCheckBox v-model="formData.acceptConditionsChecked"
+       itemName="acceptConditions" />
       <label for="checkbox">I accept the Terms & Conditions.</label>
       <button type="submit" :disabled="!formData.acceptConditionsChecked">Send</button>
       <div class="message-success" v-if="showSuccessMessage">Thank you so much, your message has been sent! I'll get back to you in X business days.</div>

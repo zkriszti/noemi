@@ -16,10 +16,11 @@ require('typeface-open-sans')
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram, faPinterest, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 config.autoAddCss = false;
-library.add(faInstagram, faPinterest, faLinkedin)
+library.add(faInstagram, faPinterest, faLinkedin, faCheck)
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
