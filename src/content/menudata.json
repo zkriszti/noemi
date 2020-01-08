@@ -1,0 +1,21 @@
+{
+  "Menus": {
+    "headerMenu": [
+      {
+        "slug": "Services"
+      },
+      {
+        "slug": "About"
+      },
+      {
+        "slug": "Prices"
+      },
+      {
+        "slug": "Contact"
+      },
+      {
+        "slug": "Blog"
+      }
+    ]
+  }
+}
