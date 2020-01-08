@@ -10,7 +10,8 @@
     </div>
     <nav class="nav" v-if="menuVisible">
       <g-link class="nav__link" to="/">Home</g-link>
-      <g-link class="nav__link" v-for="(item, index) in menuData" :key="index" :to="item.route" >{{item.slug}}</g-link>
+      <!-- <g-link class="nav__link" v-for="(item, index) in menuData" :key="index" :to="item.route" >{{item.slug}}</g-link> -->
+      <g-link class="nav__link" v-for="(item, index) in menuHeader" :key="index" :to="item.route" >{{item.slug}}</g-link>
     </nav>
   </header>
 </template>
@@ -24,6 +25,8 @@ query {
 </static-query>
 
 <script>
+import menuData from "@/content/menudata.json"
+
 export default {
   props: {
     isIndex: Boolean,
@@ -45,6 +48,15 @@ export default {
   computed: {
     menuVisible () {
       return this.$mq === 'lg' || this.isHamburgerOpen
+    },
+
+    menuHeader () {
+      return menuData.Menus['Header Menu'].map(i => {
+        return {
+          route: this.isIndex ? `/#${i.slug.toLowerCase()}` : `/${i.slug.toLowerCase()}/`,
+          slug: i.slug
+          }
+      })
     },
 
     menuData () {
