@@ -4,9 +4,9 @@
     <div class="social">
       <h4>Let's connect!</h4>
       <div class="social-icons">
-        <g-link :to="siteData.SocialMedia.instagram"><font-awesome :icon="['fab', 'instagram']" size="2x" /></g-link>
-        <g-link :to="siteData.SocialMedia.pinterest"><font-awesome :icon="['fab', 'pinterest']" size="2x" /></g-link>
-        <g-link :to="siteData.SocialMedia.linkedin"><font-awesome :icon="['fab', 'linkedin']" size="2x" /></g-link>
+        <g-link :to="siteData['Social Media'].instagram"><font-awesome :icon="['fab', 'instagram']" size="2x" /></g-link>
+        <g-link :to="siteData['Social Media'].pinterest"><font-awesome :icon="['fab', 'pinterest']" size="2x" /></g-link>
+        <g-link :to="siteData['Social Media'].linkedin"><font-awesome :icon="['fab', 'linkedin']" size="2x" /></g-link>
       </div>
     </div>
     <div class="must-haves">
