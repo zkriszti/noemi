@@ -24,17 +24,5 @@
       "name": "World Domination Package",
       "price": 450
     }
-  },
-  "Menus": {
-    "items": [
-      {
-        "route": "valami",
-        "slug": "Services"
-      },
-      {
-        "route": "valami2",
-        "slug": "About"
-      }
-    ]
   }
 }
