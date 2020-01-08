@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/content/menudata.json
   label: Menu
-  match: "**/*"
 - type: document
   path: src/content/sitedata.json
   label: Noemi Site Data
