@@ -10,8 +10,7 @@
     </div>
     <nav class="nav" v-if="menuVisible">
       <g-link class="nav__link" to="/">Home</g-link>
-      <!-- <g-link class="nav__link" v-for="(item, index) in menuData" :key="index" :to="item.route" >{{item.slug}}</g-link> -->
-      <g-link class="nav__link" v-for="(item, index) in menuHeader" :key="index" :to="item.route" >{{item.slug}}</g-link>
+      <g-link class="nav__link" v-for="(item, index) in menuHeader" :key="index" :to="item.route" >{{item.displayedName}}</g-link>
     </nav>
   </header>
 </template>
@@ -53,11 +52,12 @@ export default {
     menuHeader () {
       return menuData.Menus['Header Menu'].map(i => {
         return {
+          // slug: i.slug,
           route: this.isIndex ? `/#${i.slug.toLowerCase()}` : `/${i.slug.toLowerCase()}/`,
-          slug: i.slug
+          displayedName: i['displayed name']
           }
       })
-    },
+    }/* ,
 
     menuData () {
       return [
@@ -87,7 +87,7 @@ export default {
           isAnchor: this.isIndex
         },
       ]
-    }
+    } */
   }
 
 }

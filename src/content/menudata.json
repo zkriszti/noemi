@@ -2,19 +2,24 @@
   "Menus": {
     "Header Menu": [
       {
-        "slug": "Services"
+        "displayed name": "Services",
+        "slug": "services"
       },
       {
-        "slug": "About"
+        "displayed name": "About",
+        "slug": "about"
       },
       {
-        "slug": "Prices"
+        "displayed name": "Prices",
+        "slug": "prices"
       },
       {
-        "slug": "Contact"
+        "displayed name": "Contact Me",
+        "slug": "contact"
       },
       {
-        "slug": "Blog"
+        "displayed name": "Blog",
+        "slug": "blog"
       }
     ]
   }
