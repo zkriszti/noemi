@@ -18,6 +18,7 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram, faPinterest, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import siteData from "./content/sitedata.json"
 
 config.autoAddCss = false;
 library.add(faInstagram, faPinterest, faLinkedin, faCheck)
@@ -29,7 +30,7 @@ export default function (Vue, { router, head, isClient }) {
   // Add a meta tag
   head.meta.push({
     name: 'description',
-    content: 'Noemi Mate | Digital Marketing & SEO Consultant from Budapest, Hungary'
+    content: siteData['Site Meta Description']
   })
 
   // Handle anchor scrolling

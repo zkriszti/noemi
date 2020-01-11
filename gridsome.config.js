@@ -4,6 +4,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const siteData = require("./src/content/sitedata.json")
+
 // add .styl files in assets folder globally to all components: (see also module.exports chainWebpack)
 const path = require('path')
 
@@ -18,7 +20,7 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Noemi Mate - Digital Marketing for Small Business',
+  siteName: siteData['Site Name'],
 
   port: 8900,
 
