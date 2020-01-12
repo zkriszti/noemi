@@ -10,6 +10,7 @@
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/vue-remark": "^0.1.9",
     "gridsome": "^0.7.0",
     "serialize-javascript": "^2.1.2",
     "typeface-montserrat": "0.0.75",

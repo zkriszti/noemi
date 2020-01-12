@@ -47,6 +47,16 @@ module.exports = {
         path: "./src/content/blog/*.md",
         typeName: "BlogPost"
       }
+    },
+
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'CustomPage', // Required
+        baseDir: './src/content/pages/', // Where .md files are located
+        // pathPrefix: '/docs', // Add route prefix. Optional
+        // template: './src/templates/Documentation.vue' // Optional
+      }
     }
   ],
 
