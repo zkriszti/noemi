@@ -6,6 +6,7 @@
       <p>{{ $page.customPage.id }}</p>
     </div>
     <div v-html="$page.customPage.content" />
+    <VueRemarkContent />
   </Layout>
 </template>
 
