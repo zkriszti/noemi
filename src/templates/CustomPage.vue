@@ -1,11 +1,8 @@
 <template>
-  <Layout>
-    <h3>{{ $page.customPage.title }}</h3>
-    <div class="date-meta-container">
-      THIS!
-      <p>{{ $page.customPage.id }}</p>
-    </div>
-    <div v-html="$page.customPage.content" />
+  <Layout :isSingle="routeSingle" :id="$page.customPage.slug">
+    <h1>{{ $page.customPage.title }}</h1>
+    <!-- <div v-html="$page.customPage.content" /> -->
+    <VueRemarkContent />
   </Layout>
 </template>
 
@@ -13,6 +10,7 @@
 query customPage ($id: ID!) {
   customPage (id: $id) {
     id
+    slug
     title
     content
   }
@@ -24,7 +22,13 @@ export default {
   metaInfo() {
     return {
       title: this.$page.customPage.title
-    };
+    }
+  },
+
+  computed: {
+    routeSingle () {
+      return this.$route.path !== '/'
+    }
   }
-};
+}
 </script>

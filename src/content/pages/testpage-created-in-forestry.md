@@ -1,6 +1,5 @@
 ---
 title: 'TestPage Created In Forestry '
-date: 2019-12-10T23:00:00.000+00:00
 slug: forestry-test
 
 ---

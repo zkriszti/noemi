@@ -13,16 +13,7 @@ module.exports = function (api) {
   api.createPages(async ({ graphql, createPage }) => {
     // CREATE CUSTOM PAGES
     const { data } = await graphql(`{
-      allCustomPage {
-        edges {
-          node {
-            id
-            slug
-          }
-        }
-      }
-
-      allBlogPost {
+    allBlogPost {
         edges {
           node {
             id
@@ -32,7 +23,18 @@ module.exports = function (api) {
       }
     }`)
 
-    data.allCustomPage.edges.forEach(({ node }) => {
+    /* allCustomPage {
+      edges {
+        node {
+          id
+          slug
+        }
+      }
+    } */
+
+    // ___ COMMENT THIS OUT IF USING VUE-REMARK-CONTENT ___
+
+    /* data.allCustomPage.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,
         component: './src/templates/CustomPage.vue',
@@ -40,7 +42,7 @@ module.exports = function (api) {
           id: node.id
         }
       })
-    })
+    }) */
 
     data.allBlogPost.edges.forEach(({ node }) => {
       createPage({
