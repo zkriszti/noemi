@@ -48,9 +48,27 @@
     <Prices />
     <Contact />
     <Blog />
+    <div v-for="edge in $page.fpItems.edges" :key="edge.node.id" class="content">
+      <h1>{{ edge.node.title }}</h1>
+      <div v-html="edge.node.content"></div>
+    </div>
 
   </Layout>
 </template>
+
+<page-query>
+query fpItems {
+  fpItems: allFrontPageItem {
+    edges {
+      node {
+        path
+        title
+        content
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 import siteData from "@/content/sitedata.json"

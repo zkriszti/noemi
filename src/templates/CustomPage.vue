@@ -1,16 +1,15 @@
 <template>
-  <Layout :isSingle="routeSingle" :id="$page.customPage.slug">
-    <h1>{{ $page.customPage.title }}</h1>
-    <!-- <div v-html="$page.customPage.content" /> -->
-    <VueRemarkContent />
+  <Layout :isSingle="routeSingle" :id="$page.frontPageItem.slug">
+    <h1>{{ $page.frontPageItem.title }}</h1>
+    <div v-html="$page.frontPageItem.content" />
+    <!-- <VueRemarkContent /> -->
   </Layout>
 </template>
 
 <page-query>
-query customPage ($id: ID!) {
-  customPage (id: $id) {
+query frontPageItem ($id: ID!) {
+  frontPageItem (id: $id) {
     id
-    slug
     title
     content
   }
