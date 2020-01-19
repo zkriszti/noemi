@@ -1,5 +1,5 @@
 <template>
-  <Layout :isSingle="routeSingle" :id="$page.frontPageItem.slug">
+  <Layout :isSingle="routeSingle">
     <h1>{{ $page.frontPageItem.title }}</h1>
     <div v-html="$page.frontPageItem.content" />
     <!-- <VueRemarkContent /> -->
