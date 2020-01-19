@@ -20,7 +20,7 @@ query frontPageItem ($id: ID!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.customPage.title
+      title: this.$page.frontPageItem.title
     }
   },
 
