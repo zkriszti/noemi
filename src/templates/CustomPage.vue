@@ -12,6 +12,7 @@ query frontPageItem ($id: ID!) {
     id
     title
     content
+    slug
   }
 }
 </page-query>
