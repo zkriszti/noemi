@@ -47,7 +47,7 @@ module.exports = {
         path: "./src/content/blog/*.md",
         typeName: "BlogPost"
       }
-    },
+    }/* ,
 
     {
       use: '@gridsome/vue-remark',
@@ -57,7 +57,7 @@ module.exports = {
         // pathPrefix: '/docs', // Add route prefix. Optional
         template: './src/templates/CustomPage.vue' // Optional
       }
-    }
+    } */
   ],
 
   chainWebpack (config) {

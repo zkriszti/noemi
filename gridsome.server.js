@@ -30,25 +30,15 @@ module.exports = function (api) {
           }
         }
       }
-
-
     }`)
-
-    /*  allCustomPage {
-        edges {
-          node {
-            id
-            slug
-          }
-        }
-      } */
 
     // ___ COMMENT THIS OUT IF USING VUE-REMARK-CONTENT ___
 
     data.allFrontPageItem.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,
-        component: './src/templates/CustomPage.vue',
+        // component: './src/templates/CustomPage.vue',
+        component: './src/templates/FrontPageItem.vue',
         context: {
           id: node.id
         }

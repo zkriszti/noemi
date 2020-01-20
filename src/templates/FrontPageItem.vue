@@ -29,6 +29,10 @@ export default {
     routeSingle () {
       return this.$route.path !== '/'
     }
+  },
+
+  mounted () {
+    console.log($page.frontPageItem)
   }
 }
 </script>
