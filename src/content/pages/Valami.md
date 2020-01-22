@@ -3,5 +3,7 @@ title: About - MD testing
 slug: valami
 
 ---
-import About from '~/pages/About.vue'
+This section is about Noémi. 
+
+import About from '\~/pages/About.vue'
 <About />
