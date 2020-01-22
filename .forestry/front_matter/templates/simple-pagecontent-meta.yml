@@ -16,4 +16,5 @@ fields:
   label: Frontpage item
   description: Should this content be displayed on the front page?
 pages:
+- src/content/pages/New.md
 - src/content/pages/TestPage.md
