@@ -48,7 +48,12 @@
     <Prices />
     <Contact />
     <Blog />
-    <div v-for="edge in $page.fpItems.edges" :key="edge.node.id" class="content">
+    <!-- <div v-for="edge in $page.fpItems.edges" :key="edge.node.id" class="content">
+      <h1>{{ edge.node.title }}</h1>
+      <div v-html="edge.node.content"></div>
+      <div>{{ edge.node.is_on_frontpage }}</div>
+    </div> -->
+    <div v-for="edge in frontpageDisplayEdges" :key="edge.node.id" class="content">
       <h1>{{ edge.node.title }}</h1>
       <div v-html="edge.node.content"></div>
     </div>
@@ -64,6 +69,7 @@ query fpItems {
         path
         title
         content
+        is_on_frontpage
       }
     }
   }
@@ -95,6 +101,12 @@ export default {
   data () {
     return {
       siteData: siteData
+    }
+  },
+
+  computed: {
+    frontpageDisplayEdges () {
+      return this.$page.fpItems.edges.filter(e => e.node.is_on_frontpage)
     }
   }
 }

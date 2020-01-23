@@ -13,6 +13,7 @@ query frontPageItem ($id: ID!) {
     title
     content
     slug
+    is_on_frontpage
   }
 }
 </page-query>
