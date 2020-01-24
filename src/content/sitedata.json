@@ -15,19 +15,28 @@
   },
   "Prices": {
     "package1": {
-      "name": "Super Affordable Package",
+      "name": "Super Affordable",
       "price": 250,
-      "features": []
+      "shortDesc": "This is the greatest offer of all times,with almost all the things worth considering. Worth every dime.",
+      "features": ["Good things", "Awesome things", "Hyper-awesome things", "Self-driving car lessons", "Happiness advice"],
+      "featureItem Color": "#BBD838",
+      "buttonText": "Count Me In"
     },
     "package2": {
-      "name": "Awesome Package",
+      "name": "Awesome",
       "price": 350,
-      "features": []
+      "shortDesc": "Almost All The Things! This Package is just pure awe-some-ness!",
+      "features": ["Good things", "Awesome things", "Hyper-awesome things++", "Self-driving car lessons", "Happiness advice", "Bounty Chocolate", "Cookie Monster Live Visit"],
+      "featureItem Color": "#D83A69",
+      "buttonText": "Hey, Get Me Awesome"
     },
     "package3": {
-      "name": "World Domination Package",
+      "name": "World Domination",
       "price": 450,
-      "features": []
+      "shortDesc": "This will solve your business needs once and for all! Shiny marketing, flowing ideas.",
+      "features": ["Everything in Awesome, plus...", "Milli Vanilli", "Dance Lessons", "Extra Sunglasses"],
+      "featureItem Color": "#48248C",
+      "buttonText": "This Is What I Need"
     }
   }
 }
