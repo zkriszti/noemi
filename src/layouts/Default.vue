@@ -44,6 +44,7 @@ body
   margin: 0
   padding: 0
   line-height: 1.5
+  color: #444
 
   .layout
     max-width: 1920px
