@@ -38,8 +38,7 @@
         <h1><span>She</span><span>finds</span><span>focus</span></h1>
       </div>
       <div class="hero-content">
-        <p>It's Noemi's digital marketing & SEO consulting page.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
+        <p>{{siteData["Intro Text"]}}</p>
       </div>
     </div>
 
@@ -48,11 +47,7 @@
     <Prices />
     <Contact />
     <Blog />
-    <!-- <div v-for="edge in $page.fpItems.edges" :key="edge.node.id" class="content">
-      <h1>{{ edge.node.title }}</h1>
-      <div v-html="edge.node.content"></div>
-      <div>{{ edge.node.is_on_frontpage }}</div>
-    </div> -->
+
     <div v-for="edge in frontpageDisplayEdges" :key="edge.node.id" class="content">
       <h1>{{ edge.node.title }}</h1>
       <div v-html="edge.node.content"></div>
