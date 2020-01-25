@@ -23,8 +23,8 @@ fields:
     color_format: Hex
   default: "#FFFFFF"
   showOnly:
-    field: is_on_frontpage
     value: true
+  description: 'The color you set here is only applied on frontpage. '
 pages:
 - src/content/pages/New.md
 - src/content/pages/TestPage.md
