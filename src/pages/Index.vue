@@ -42,8 +42,8 @@
       </div>
     </div>
 
-    <Services />
-    <About />
+    <!-- <Services />
+    <About /> -->
     <Prices />
     <Contact />
     <Blog />
@@ -64,7 +64,7 @@ query fpItems {
         path
         title
         content
-        is_on_frontpage
+        isOnFrontpage
       }
     }
   }
@@ -101,7 +101,7 @@ export default {
 
   computed: {
     frontpageDisplayEdges () {
-      return this.$page.fpItems.edges.filter(e => e.node.is_on_frontpage)
+      return this.$page.fpItems.edges.filter(e => e.node.isOnFrontpage)
     }
   }
 }

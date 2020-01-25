@@ -2,7 +2,6 @@
   <Layout :isSingle="routeSingle" :id="$page.frontPageItem.slug">
     <h1>{{ $page.frontPageItem.title }}</h1>
     <div v-html="$page.frontPageItem.content" />
-    <!-- <VueRemarkContent /> -->
   </Layout>
 </template>
 
@@ -13,7 +12,8 @@ query frontPageItem ($id: ID!) {
     title
     content
     slug
-    is_on_frontpage
+    isOnFrontpage
+    backgroundColor
   }
 }
 </page-query>
@@ -29,11 +29,15 @@ export default {
   computed: {
     routeSingle () {
       return this.$route.path !== '/'
+    },
+
+    bgColor () {
+      return this.$page.frontPageItem.backgroundColor
     }
   },
 
   mounted () {
-    console.log($page.frontPageItem)
+    console.log(this.bgColor)
   }
 }
 </script>

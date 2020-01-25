@@ -1,8 +1,8 @@
 ---
-background_color: "#E9C9C9"
+backgroundColor: "#E9C9C9"
 title: BG-Test
 slug: bgtest
-is_on_frontpage: true
+isOnFrontpage: true
 
 ---
-This is a background test. 
+This is a background test.

@@ -1,5 +1,5 @@
 <template>
-  <div :class="[isSingle ? 'layout' : '', screenClass]" >
+  <div :class="[isSingle ? 'layout' : '', screenClass]">
     <SiteHeader v-if="isSingle" :isIndex="isIndex"/>
     <div class="content"><slot /></div>
     <SiteFooter v-if="isSingle" />
@@ -20,6 +20,11 @@ export default {
     isSingle: {
       type: Boolean,
       default: false
+    },
+
+    bg: {
+      type: String,
+      default: "#FFF"
     }
   },
 
