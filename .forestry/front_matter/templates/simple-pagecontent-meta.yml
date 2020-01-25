@@ -15,6 +15,16 @@ fields:
   type: boolean
   label: Frontpage item
   description: Should this content be displayed on the front page?
+- name: background_color
+  type: color
+  label: Background color for this section
+  config:
+    required: false
+    color_format: Hex
+  default: "#FFFFFF"
+  showOnly:
+    field: is_on_frontpage
+    value: true
 pages:
 - src/content/pages/New.md
 - src/content/pages/TestPage.md
