@@ -11,11 +11,11 @@ fields:
     required: false
   label: slug
   description: The expression that references this page in the URL
-- name: is_on_frontpage
+- name: isOnFrontpage
   type: boolean
   label: Frontpage item
   description: Should this content be displayed on the front page?
-- name: background_color
+- name: backgroundColor
   type: color
   label: Background color for this section
   config:
