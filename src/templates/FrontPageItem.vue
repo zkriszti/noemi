@@ -37,7 +37,7 @@ export default {
   },
 
   mounted () {
-    console.log(this.bgColor)
+    console.log(this.$page.frontPageItem, this.bgColor)
   }
 }
 </script>

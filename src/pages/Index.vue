@@ -3,15 +3,6 @@
 
     <div class="hero">
       <div class="hero-top">
-        <!-- <img alt="Example image"
-          :srcset="`
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,w_450${siteData.Hero.HeroImageURL} 450w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_768,h_300${siteData.Hero.HeroImageURL} 768w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_1024,h_350${siteData.Hero.HeroImageURL} 1024w,
-          https://res.cloudinary.com/zkriszti/f_auto,q_70,dpr_auto,c_fill,w_1920,h_550${siteData.Hero.HeroImageURL} 1920w
-          `"
-          :src="`https://res.cloudinary.com/zkriszti/f_auto,q_70,w_1920${siteData.Hero.HeroImageURL}`" /> -->
-
         <picture>
           <source
           media="(max-width: 450px)"
@@ -46,9 +37,9 @@
     <About /> -->
     <Prices />
     <Contact />
-    <Blog />
+    <!-- <Blog /> -->
 
-    <div v-for="edge in frontpageDisplayEdges" :key="edge.node.id" class="content">
+    <div v-for="edge in frontpageDisplayEdges" :key="edge.node.id" class="content" :id="edge.node.slug" :style="`background-color: ${edge.node.backgroundColor}`">
       <h1>{{ edge.node.title }}</h1>
       <div v-html="edge.node.content"></div>
     </div>
@@ -61,10 +52,12 @@ query fpItems {
   fpItems: allFrontPageItem {
     edges {
       node {
+        slug
         path
         title
         content
         isOnFrontpage
+        backgroundColor
       }
     }
   }
@@ -74,11 +67,11 @@ query fpItems {
 <script>
 import siteData from "@/content/sitedata.json"
 
-import Services from '@/pages/Services.vue'
-import About from '@/pages/About.vue'
+/* import Services from '@/pages/Services.vue'
+import About from '@/pages/About.vue' */
 import Prices from '@/pages/Prices.vue'
 import Contact from '@/pages/Contact.vue'
-import Blog from '@/pages/Blog.vue'
+/* import Blog from '@/pages/Blog.vue' */
 
 export default {
   metaInfo: {
@@ -86,11 +79,11 @@ export default {
   },
 
   components: {
-    Services,
-    About,
+    /* Services,
+    About, */
     Prices,
     Contact,
-    Blog
+    /* Blog */
   },
 
   data () {
