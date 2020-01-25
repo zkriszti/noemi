@@ -1,8 +1,8 @@
 ---
-title: Let's see the TestPage
-slug: testpage
+title: Intro Text
+slug: intro
 isOnFrontpage: true
 backgroundColor: "#FFFFFF"
 
 ---
-This is the test-content. Bla-bla-bla. And more and more and more. Evening test.
+Ready to master your marketing efforts but you fear you are just spinning around in circles?   Are you feeling confused about everything in marketing? Does it even affect your confidence as a professional? Are you feeling stuck because you have this deep fear that everything you have reached is just based on luck and all your clients found you by accident?  You feel desperate that this whole business thing never gets easier and it always requires hard work to get new clients? Are you afraid of saying it out loud how frustrated you get whenever you have to think about your marketing duties? You are afraid you spend unnecessary time on marketing efforts and you steal quality time from your family?
