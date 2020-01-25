@@ -42,7 +42,10 @@ export default {
 .screen-lg
   .pricing
     display: grid
-    grid-template-columns: repeat(3, auto)
     grid-column-gap: 45px
+    grid-auto-flow: column
+    grid-template-rows: repeat(5,auto)
+    justify-items: center
+    text-align: center
 
 </style>

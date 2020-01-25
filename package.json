@@ -15,6 +15,7 @@
     "serialize-javascript": "^2.1.2",
     "typeface-montserrat": "0.0.75",
     "typeface-open-sans": "0.0.75",
+    "vue-fragment": "^1.5.1",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {

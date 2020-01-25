@@ -3,6 +3,7 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import VueMq from 'vue-mq'
+import Fragment from 'vue-fragment'
 
 import '~/assets/fonts.styl'
 import '~/assets/colors.styl'
@@ -54,6 +55,9 @@ export default function (Vue, { router, head, isClient }) {
       lg: Infinity,
     }
   })
+
+  // For multi-root templates:
+  Vue.use(Fragment.Plugin)
 
   // Use FontAwesome
   Vue.component('font-awesome', FontAwesomeIcon)

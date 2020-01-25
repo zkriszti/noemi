@@ -1,5 +1,6 @@
 <template>
-  <div class="price-col">
+  <!-- <div class="price-col"> -->
+  <fragment>
     <h2 class="package-name" :style="`color: ${currentPackage['featureItem Color']}`">{{currentPackage.name}}</h2>
     <div class="package-short-description">{{currentPackage.shortDesc}}</div>
     <div class="price-row">
@@ -14,13 +15,19 @@
           <font-awesome :icon="['fas', 'check-circle']" :color="currentPackage['featureItem Color']" /><span>{{item}}</span></li>
       </ul>
     </div>
-  </div>
+  </fragment>
+  <!-- </div> -->
 </template>
 
 <script>
 import siteData from "@/content/sitedata.json"
+import { Fragment } from 'vue-fragment'
 
 export default {
+  components: {
+    Fragment
+  },
+
   data () {
     return {
       siteData: siteData
@@ -42,13 +49,16 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.price-col
+/* .price-col
   justify-items: center
   text-align: center
   display: grid
-  grid-template-rows: 80px 90px 48px 48px auto
-  > *
-    margin: 0
+  grid-template-rows: 80px 90px 48px 48px auto */
+  .package-name,
+  .package-short-description,
+  .price-row,
+  .cta
+    margin: 8px 0
     align-self: center
 
   .feature-list-container
@@ -92,7 +102,7 @@ export default {
     border: 0px
     border-radius: 4px
     padding: 12px 0
-    margin-top: 8px
+    margin: 8px 0
     width: 80%
     box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.17)
     max-width: 220px
