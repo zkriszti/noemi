@@ -4,7 +4,7 @@
   "Hero": {
     "HeroImageURL": "/v1577547327/noemi/n1_vm8nwp.jpg"
   },
-  "Intro Text": "Itt írd át - ez lesz a Hero Image alatti intro szöveged.",
+  "Intro Text": "Ready to master your marketing efforts but you fear you are just spinning around in circles?   Are you feeling confused about everything in marketing? Does it even affect your confidence as a professional? Are you feeling stuck because you have this deep fear that everything you have reached is just based on luck and all your clients found you by accident?  You feel desperate that this whole business thing never gets easier and it always requires hard work to get new clients? Are you afraid of saying it out loud how frustrated you get whenever you have to think about your marketing duties? You are afraid you spend unnecessary time on marketing efforts and you steal quality time from your family?",
   "Social Media": {
     "facebook": "https://facebook.com/shefindsfocus2",
     "linkedin": "https://linkedin.com/shefindsfocus2",
@@ -19,7 +19,13 @@
       "name": "Super Affordable",
       "price": 250,
       "shortDesc": "This is the greatest offer of all times,with almost all the things worth considering. Worth every dime.",
-      "features": ["Good things", "Awesome things", "Hyper-awesome things", "Self-driving car lessons", "Happiness advice"],
+      "features": [
+        "Good things",
+        "Awesome things",
+        "Hyper-awesome things",
+        "Self-driving car lessons",
+        "Happiness advice"
+      ],
       "featureItem Color": "#BBD838",
       "buttonText": "Count Me In"
     },
@@ -27,7 +33,15 @@
       "name": "Awesome",
       "price": 350,
       "shortDesc": "Almost All The Things! This Package is just pure awe-some-ness!",
-      "features": ["Good things", "Awesome things", "Hyper-awesome things++", "Self-driving car lessons", "Happiness advice", "Bounty Chocolate", "Cookie Monster Live Visit"],
+      "features": [
+        "Good things",
+        "Awesome things",
+        "Hyper-awesome things++",
+        "Self-driving car lessons",
+        "Happiness advice",
+        "Bounty Chocolate",
+        "Cookie Monster Live Visit"
+      ],
       "featureItem Color": "#D83A69",
       "buttonText": "Hey, Get Me Awesome"
     },
@@ -35,7 +49,12 @@
       "name": "World Domination",
       "price": 450,
       "shortDesc": "This will solve your business needs once and for all! Shiny marketing, flowing ideas.",
-      "features": ["Everything in Awesome, plus...", "Milli Vanilli", "Dance Lessons", "Extra Sunglasses"],
+      "features": [
+        "Everything in Awesome, plus...",
+        "Milli Vanilli",
+        "Dance Lessons",
+        "Extra Sunglasses"
+      ],
       "featureItem Color": "#48248C",
       "buttonText": "This Is What I Need"
     }
