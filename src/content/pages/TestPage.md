@@ -1,5 +1,5 @@
 ---
-title: Intro Text
+title: Intro Text 01
 slug: intro
 isOnFrontpage: true
 backgroundColor: "#FFFFFF"
