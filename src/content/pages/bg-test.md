@@ -14,3 +14,5 @@ isOnFrontpage: true
 * giving personalized advice on how to grow with social media
 * auditing your social media accounts
 * showing my minimalist approach towards marketing - focusing on important tasks, platforms instead of doing all the things we ‘supposed to’ do because it trendy now. We focus on where your ideal clients search for you. And, we’ll come up as many productivity tricks as possible because the less time we waste, the better ;)
+
+EZUTÁN KELLENE, HOGY JÖJJÖN A PRICES
