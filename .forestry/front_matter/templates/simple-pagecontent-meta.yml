@@ -26,6 +26,7 @@ fields:
     value: true
   description: 'The color you set here is only applied on frontpage. '
 pages:
+- src/content/pages/05/mini-about-05.md
 - src/content/pages/New.md
 - src/content/pages/TestPage.md
 - src/content/pages/Valami.md
