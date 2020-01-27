@@ -1,5 +1,5 @@
 ---
-title: 04 (prices után)
+title: 'What does consulting with me mean? 04 '
 slug: valami
 isOnFrontpage: true
 backgroundColor: "#DFD64B"
