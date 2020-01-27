@@ -15,7 +15,7 @@ You feel desperate that this whole business thing never gets easier and it alway
 
 Are you afraid of saying it out loud how frustrated you get whenever you have to think about your marketing duties? You are afraid you spend unnecessary time on marketing efforts and you steal quality time from your family?
 
-![]( https://res.cloudinary.com/matenoemi/v1579962217/UShonlap/resized_noemi-43_adh4sf.jpg)
+KÉP
 
 Picture this: You have a clear plan and you know what to post and you don’t have to sit at your laptop trying to come up with content ideas.
 
