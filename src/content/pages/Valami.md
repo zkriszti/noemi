@@ -1,11 +1,17 @@
 ---
-title: About - MD testing
+title: 04 (prices után)
 slug: valami
 isOnFrontpage: true
-backgroundColor: "#FFFFFF"
+backgroundColor: "#DFD64B"
 
 ---
-This section is about Noémi.
+## **What does consulting with me mean?**
 
-import About from '\~/pages/About.vue'
-<About />
+* it’s a partnership between you and me
+* sessions where I can give you my expert advice on what to do in what order to save time to gain a better work-life balance while getting forward in your business
+* super-focused sessions where we explore your options and opportunities
+* creating solutions to your problems
+* If your goal is to improve your marketing, and you already know you are all in, schedule our appointment now.
+* Simply send me a message below and I’ll get back to you with some questions to figure out if we are 100% sure the best fit ever - because you know, I don’t like wasting anybody’s money, I only work with those who I can help.
+
+E-MAIL ME (button, ami a kontakt page-re vezet)
