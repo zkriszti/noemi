@@ -35,13 +35,20 @@
 
     <!-- <Services />
     <About /> -->
-    <Prices />
-    <Contact />
-    <!-- <Blog /> -->
-
-    <div v-for="edge in frontpageDisplayEdges" :key="edge.node.id" class="content" :id="edge.node.slug" :style="`background-color: ${edge.node.backgroundColor}`">
-      <h1>{{ edge.node.title }}</h1>
-      <div v-html="edge.node.content"></div>
+    <div class="orderedthingy">
+      <!-- <div class="ord-price"><Prices key="prices" /></div>
+      <div class="ord-contact"><Contact key="contact" /></div>
+      <div v-for="edge in frontpageDisplayEdges" :key="`${edge.node.slug}-${edge.node.id}`" class="content" :id="edge.node.slug" :style="`background-color: ${edge.node.backgroundColor}`">
+        <h1>{{ edge.node.title }}</h1>
+        <div v-html="edge.node.content"></div>
+      </div> -->
+      <div v-for="(item, index) in mixedArray" :key="index" class="content" :id="getItemID(item)" :style="`background-color: ${getItemStyles(item)}`">
+        <component v-if="item.type==='component'" :is="item.component"></component>
+        <div v-else class="content edge-content">
+          <h1>{{ item.edgeData.node.title }}</h1>
+          <div v-html="item.edgeData.node.content"></div>
+        </div>
+      </div>
     </div>
 
   </Layout>
@@ -67,11 +74,8 @@ query fpItems {
 <script>
 import siteData from "@/content/sitedata.json"
 
-/* import Services from '@/pages/Services.vue'
-import About from '@/pages/About.vue' */
 import Prices from '@/pages/Prices.vue'
 import Contact from '@/pages/Contact.vue'
-/* import Blog from '@/pages/Blog.vue' */
 
 export default {
   metaInfo: {
@@ -79,11 +83,8 @@ export default {
   },
 
   components: {
-    /* Services,
-    About, */
     Prices,
-    Contact,
-    /* Blog */
+    Contact
   },
 
   data () {
@@ -95,7 +96,48 @@ export default {
   computed: {
     frontpageDisplayEdges () {
       return this.$page.fpItems.edges.filter(e => e.node.isOnFrontpage)
+    },
+
+    frontpageDisplayEdgesArray () {
+      return this.frontpageDisplayEdges.map(e => { return {type: 'customEdge', edgeData: e } })
+    },
+
+    mixedArray () {
+      return [
+        { type: 'component', component: 'Prices' },
+        { type: 'component', component: 'Contact' },
+        ...this.frontpageDisplayEdgesArray
+      ]
+    },
+
+    dictstring () {
+      return JSON.stringify(
+        {"one" : [15, 4.5],
+        "two" : [34, 3.3],
+        "three" : [67, 5.0],
+        "four" : [32, 4.1]})
     }
+  },
+
+  methods: {
+    getItemID (i) {
+      return i.type === 'component' ? i.component.toLowerCase() : i.edgeData.node.slug
+    },
+
+    getItemStyles (i) {
+      return i.type === 'component' ? '' : i.edgeData.node.backgroundColor
+    }/* ,
+
+    generateJSON () {
+      const jsonfile = require('jsonfile');
+      jsonfile.writeFile("../content/thing.json", this.dictstring, function(err, result) {if(err) console.log('error', err);});
+    } */
+  },
+
+  mounted () {
+    console.log(this.frontpageDisplayEdges)
+    console.log(this.mixedArray)
+
   }
 }
 
@@ -130,4 +172,15 @@ export default {
 
 .hero-content
   padding: 0 20px
+
+.orderedthingy
+  display: flex
+  flex-direction: column
+
+  .ord-price
+    order: 3
+  .ord-contact
+    order: 1
+  .ord-md
+    order: 2
 </style>
