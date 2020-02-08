@@ -32,6 +32,15 @@ module.exports = {
     }
   },
 
+  templates: {
+    BlogPost: [
+      {
+        path: '/blog/:title',
+        component: './src/templates/BlogPost.vue'
+      }
+    ]
+  },
+
   plugins: [
     {
       use: "@gridsome/source-filesystem",
