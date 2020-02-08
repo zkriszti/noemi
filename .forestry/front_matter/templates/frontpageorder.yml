@@ -1,7 +1,0 @@
----
-label: FrontPageOrder
-hide_body: true
-display_field: title
-fields: []
-pages:
-- src/content/order.md
