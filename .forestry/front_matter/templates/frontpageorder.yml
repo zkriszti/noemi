@@ -8,9 +8,3 @@ fields:
   template: simple-pagecontent-meta
   label: AggregatePage
   description: Aggregate Page Help
-- name: aggregateBlog
-  type: include
-  config: {}
-  template: blogpost-meta
-  label: AggregateBlog
-  description: Aggregate for blog fields
