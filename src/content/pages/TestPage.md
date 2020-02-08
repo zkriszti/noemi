@@ -18,8 +18,6 @@ Are you afraid of saying it out loud how frustrated you get whenever you have to
 
 KÉP
 
-![Noemi - Alt text]( https://res.cloudinary.com/matenoemi/v1579962212/UShonlap/resized_noemi-19_d4bvkg.jpg "Noemi working")
-
 Picture this: You have a clear plan and you know what to post and you don’t have to sit at your laptop trying to come up with content ideas.
 
 Imagine having confidence in EVERYTHING you do in business – not only in your profession but also in your marketing efforts.
