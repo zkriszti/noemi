@@ -2,12 +2,6 @@
 label: FrontPageOrder
 hide_body: true
 display_field: title
-fields:
-- name: aggregatePage
-  type: include
-  config: {}
-  template: simple-pagecontent-meta
-  label: AggregatePage
-  description: Aggregate Page Help
+fields: []
 pages:
 - src/content/order.md
