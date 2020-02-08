@@ -9,3 +9,5 @@ fields:
   template: simple-pagecontent-meta
   label: AggregatePage
   description: Aggregate Page Help
+pages:
+- src/content/order.md
