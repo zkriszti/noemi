@@ -25,6 +25,19 @@ fields:
   showOnly:
     value: true
   description: 'The color you set here is only applied on frontpage. '
+- name: images
+  type: field_group_list
+  fields:
+  - name: img
+    type: file
+    config:
+      maxSize: 250
+    label: img
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Images
 pages:
 - src/content/pages/05/mini-about-05.md
 - src/content/pages/New.md
