@@ -65,6 +65,7 @@ query fpItems {
         content
         isOnFrontpage
         backgroundColor
+        order
       }
     }
   }
@@ -99,16 +100,20 @@ export default {
     },
 
     frontpageDisplayEdgesArray () {
-      return this.frontpageDisplayEdges.map(e => { return {type: 'customEdge', edgeData: e } })
+      return this.frontpageDisplayEdges.map(e => { return {type: 'customEdge', edgeData: e, order: e.node.order } })
     },
 
-    mixedArray () {
+    mixedArrayUnsorted () {
       return [
-        { type: 'component', component: 'Prices' },
-        { type: 'component', component: 'Contact' },
+        { type: 'component', component: 'Prices', order: 4 },
+        { type: 'component', component: 'Contact', order: 1 },
         ...this.frontpageDisplayEdgesArray
       ]
     },
+
+    mixedArray () {
+      return this.mixedArrayUnsorted.sort((a,b) => a.order - b.order)
+    }/* ,
 
     dictstring () {
       return JSON.stringify(
@@ -116,7 +121,7 @@ export default {
         "two" : [34, 3.3],
         "three" : [67, 5.0],
         "four" : [32, 4.1]})
-    }
+    } */
   },
 
   methods: {
@@ -136,8 +141,8 @@ export default {
 
   mounted () {
     console.log(this.frontpageDisplayEdges)
-    console.log(this.mixedArray)
-
+    const cucc = this.mixedArray.map(i => { return i.type === 'component' ? {ord: i.order, title: i.title} : {ord: i.edgeData.node.order, title: i.edgeData.node.title} })
+    console.log(cucc)
   }
 }
 

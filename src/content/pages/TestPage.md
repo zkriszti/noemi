@@ -3,6 +3,7 @@ title: Intro Text 01
 slug: intro
 isOnFrontpage: true
 backgroundColor: "#FFFFFF"
+order: 1
 
 ---
 ## Ready to master your marketing efforts but you fear you are just spinning around in circles?

@@ -3,13 +3,14 @@ backgroundColor: "#FFFFFF"
 title: ABOUT PAGE
 slug: aboutpage
 isOnFrontpage: false
+order: 0
 
 ---
 ## **Hey! I’m Noemi**
 
 Entrepreneur, marketing nerd, and a real enthusiast at heart, dedicated to helping your business thrive without feeling lost in marketing. I believe in mission-driven business, and I’m passionate about showing the tips and tricks for a successful marketing strategy. You won’t have to waste your time on research and trying to get rid of overwhelm, I’ll show you how to do it.
 
-  
+
 ![]( https://res.cloudinary.com/matenoemi/v1579962233/UShonlap/resized_noemi-59_d6icay.jpg)
 
 This is me NOW but this is not how it all started.
@@ -28,7 +29,7 @@ If you feel frustrated and you are afraid of wasting time on marketing efforts, 
 
 This was me.
 
-  
+
 ![]( https://res.cloudinary.com/matenoemi/v1579962212/UShonlap/resized_noemi-19_d4bvkg.jpg)
 
 Then I had a clear plan, a structure in my life and it started to feel much easier to come up with content ideas, doing the networking thingy and I gained back my confidence in my business.
@@ -43,12 +44,12 @@ When I started my business, it wasn’t an easy beginning. I was like ‘okay, m
 
 Luckily, I had (and still have) very supportive friends, and some of them being coaches and consultants themselves helped a lot. I realised, without their professional help, I couldn’t have done it. So, here I am, doing what I lOVE.
 
-  
+
 Help is crucial so I’m very happy that I can work in the supporting field – I support your business with my marketing approach. I’m just staying in the background, you are the hero of your business.
 
 I have been an entrepreneur for 15+ years but for many years I was just a so-called entrepreneur, **I didn’t have the right mindset, I was just doing okay(ish) and that was enough(ish).** I didn’t use all my potentials. I was teaching English and Pilates (I know, I know, two totally different fields but they were a perfect mix for me, when I was tired of one, I did the other – different people, different location, and Pilates is a good change after sitting for hours). It was ideal. Or at least, I thought it was ideal.
 
-  
+
 However, I was overworking myself and I was very, very close to a burnout. Then even closer and finally I had to stop working because a serious burnout. I was devastated, I felt drained physically and mentally.
 
 But I had to get up. After this, I started to be more open for changes, I knew I needed a new working style. But I kept going.
@@ -67,7 +68,7 @@ My certs look cool but real life experiences matter even more.
 
 Because of my burnout I was more open to see the mistakes we, entrepreneurs tend to make. It taught me a lot. This is why I decided to focus more on minimalism than sitting on the trend of hassling and showing how busy I am all the time. My burnout also taught me the very important things in life, that a balance is necessary and it totally changed my view about work. I can see it now where we waste time and where we should put more attention. I choose to focus on working smart rather than hard. Okay, I work hard but in a focused manner, when and where I need to and the rest is for my family and friends. And for peeping all the cats and dogs on Instagram. And hedgehogs. I love hedgehogs, too. Oh, and donkeys!
 
-##   
+##
 Okay, but that’s enough about nostalgia and chatting, let’s get down to business.
 
 If you have an awesome product but you are full of questions about how to make your clients know about it, just ask me.

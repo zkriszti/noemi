@@ -3,6 +3,7 @@ backgroundColor: "#FFFFFF"
 title: MINI ABOUT  05
 slug: ''
 isOnFrontpage: true
+order: 0
 
 ---
 **You are asking: WHY NOW?**
